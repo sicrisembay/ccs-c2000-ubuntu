@@ -6,6 +6,10 @@ RUN apt install --yes --no-install-recommends libc6-i386
 RUN apt install --yes --no-install-recommends libusb-0.1-4
 RUN apt install --yes --no-install-recommends libgconf-2-4
 RUN apt install --yes --no-install-recommends git
+RUN apt install --yes --no-install-recommends --reinstall ca-certificates
+RUN apt install --yes --no-install-recommends python3
+RUN apt install --yes --no-install-recommends python3-pip
+RUN pip3 install kconfiglib
 
 WORKDIR /ccs_install
 
